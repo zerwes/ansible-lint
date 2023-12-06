@@ -39,6 +39,7 @@ runs:
     - name: Generate .git/ansible-lint-requirements.txt
       shell: bash
       env:
+        github_action_ref: "${{ github.action_ref }}"
         GH_ACTION_REF: ${{ github.action_ref || 'main' }}
       working-directory: ${{ steps.inputs.outputs.working_directory }}
       run: |
