@@ -46,6 +46,7 @@ runs:
         wget --output-document=.git/ansible-lint-requirements.txt https://raw.githubusercontent.com/ansible/ansible-lint/$GH_ACTION_REF/.config/lock-requirements.txt
         echo "github.action_ref ${{ github.action_ref }}"
         echo "GH_ACTION_REF $GH_ACTION_REF"
+        echo "github_action_ref $github_action_ref"
 
     - name: Set up Python
       if: inputs.setup_python == 'true'
